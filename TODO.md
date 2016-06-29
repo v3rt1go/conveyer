@@ -2,7 +2,7 @@
 
 # TODO
 
-[ ] Write documentation/plan based on contentful
-[ ] Create blog resource data model schema
+* Write documentation/plan based on contentful
+* Create blog resource data model schema
 
 # DONE
