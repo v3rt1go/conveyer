@@ -1,9 +1,9 @@
-﻿namespace Conveyer.Core
+﻿namespace Conveyer.Core.State
 {
 	/// <summary>
 	/// Access options for the unit entity
 	/// </summary>
-	public enum UnitAccess
+	public enum AccessModifier
 	{
 		/// <summary>
 		/// This unit has a private access level and cannot be

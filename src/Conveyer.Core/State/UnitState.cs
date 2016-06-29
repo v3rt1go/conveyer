@@ -1,4 +1,4 @@
-﻿namespace Conveyer.Core
+﻿namespace Conveyer.Core.State
 {
 	/// <summary>
 	///	State options for the unit entity

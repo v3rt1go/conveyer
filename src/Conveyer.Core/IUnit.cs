@@ -1,9 +1,10 @@
 ﻿namespace Conveyer.Core
 {
 	using System;
+	using Conveyer.Core.State;
 
 	/// <summary>
-	/// Defines the common contract that all units adhere to
+	/// Defines the common contract that all Units adhere to
 	/// </summary>
 	public interface IUnit
 	{
@@ -15,7 +16,7 @@
 
 		/// <summary>
 		/// Gets or sets the State of the unit.
-		/// Possible values: Published, Changes, Draft, Archived
+		/// Possible values: Published, Changed, Draft, Archived
 		/// </summary>
 		UnitState State { get; set; }
 
@@ -59,7 +60,7 @@
 		/// Gets or sets the access level of the unit in relation to other
 		/// modules. Possible values: Private, Public
 		/// </summary>
-		UnitAccess Access { get; set; }
+		AccessModifier Access { get; set; }
 
 		/// <summary>
 		/// Gets or sets the GUID of the module that the unit belongs to
