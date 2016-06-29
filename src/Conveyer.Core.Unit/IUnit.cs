@@ -1,7 +1,9 @@
-﻿namespace Conveyer.Core
+﻿namespace Conveyer.Core.Unit
 {
 	using System;
+
 	using Conveyer.Core.State;
+	using Conveyer.Core.Unit.State;
 
 	/// <summary>
 	/// Defines the common contract that all Units adhere to

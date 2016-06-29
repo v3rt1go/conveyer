@@ -1,10 +1,8 @@
-﻿namespace Conveyer.Core
+﻿namespace Conveyer.Core.Field
 {
 	using System;
-	using System.Collections;
 	using System.Collections.Generic;
 
-	using Conveyer.Core.Field;
 	using Conveyer.Core.Field.State;
 	using Conveyer.Core.Field.Types;
 	using Conveyer.Core.Field.Ui;
@@ -48,20 +46,19 @@
 		/// </summary>
 		string HelpText { get; set; }
 
-		/*
-		 *	TODO: ValidationRules, SerializationRules and Appearance details
-		 *  should be strongly typed from dedicated assemblies
-		*/
-
 		/// <summary>
 		///	Gets or sets the validation rules for the UnitField
 		/// </summary>
-		IList<ValidationType> ValidationRules { get; set; }
+		IEnumerable<ValidationType> ValidationRules { get; set; }
 
 		/// <summary>
 		/// Gets the list of allowed validations based on the FieldType
 		/// </summary>
 		IReadOnlyList<ValidationType> AllowedValidations { get; }
+
+		/*
+		 *	TODO: SerializationRules should be strongly typed from dedicated assemblies
+		*/
 
 		/// <summary>
 		/// Gets or sets the serialization rules for the UnitField
