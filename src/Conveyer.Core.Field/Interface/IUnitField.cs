@@ -1,15 +1,14 @@
-﻿namespace Conveyer.Core.Field
+﻿using System;
+using System.Collections.Generic;
+using Conveyer.Core.Field.State;
+using Conveyer.Core.Field.Types;
+using Conveyer.Core.Field.Ui;
+using Conveyer.Core.Field.Validations;
+using Conveyer.Core.State;
+
+namespace Conveyer.Core.Field.Interface
 {
-	using System;
-	using System.Collections.Generic;
-
-	using Conveyer.Core.Field.State;
-	using Conveyer.Core.Field.Types;
-	using Conveyer.Core.Field.Ui;
-	using Conveyer.Core.Field.Validations;
-	using Conveyer.Core.State;
-
-	/// <summary>
+    /// <summary>
 	/// Defines the common contract that all UnitFields must adhere to
 	/// </summary>
 	public interface IUnitField
@@ -23,13 +22,15 @@
 		/// <summary>
 		/// Gets or sets the State of the field.
 		/// Possible values: Enabled, Changed, Clean, Archived
+		/// Default value: Clean
 		/// </summary>
 		FieldState State { get; set; }
 
 		/// <summary>
 		/// Gets the Type of the field.
 		/// Once set, the field type cannot be changed else it will break
-		/// versioning and history
+		/// versioning and history.
+		/// Default value: ShortText
 		/// </summary>
 		FieldType Type { get; }
 
@@ -55,20 +56,6 @@
 		/// Gets the list of allowed validations based on the FieldType
 		/// </summary>
 		IReadOnlyList<ValidationType> AllowedValidations { get; }
-
-		/*
-		 *	TODO: SerializationRules should be strongly typed from dedicated assemblies
-		*/
-
-		/// <summary>
-		/// Gets or sets the serialization rules for the UnitField
-		/// </summary>
-		string[] SerializationRules { get; set; }
-
-		/// <summary>
-		/// Gets or sets the list of allowed serialization rules for the UnitField
-		/// </summary>
-		string[] AllowedSerializers { get; set; }
 
 		/// <summary>
 		/// Gets or sets the appearance details for the UnitField

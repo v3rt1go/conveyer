@@ -1,9 +1,9 @@
-﻿namespace Conveyer.Core.Field
-{
-	using System;
-	using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-	public interface IUnitFieldRepository
+namespace Conveyer.Core.Field.Interface
+{
+    public interface IUnitFieldRepository
 	{
 		/// <summary>
 		/// Adds a new unit field to the data store
