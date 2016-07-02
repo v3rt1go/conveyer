@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Conveyer.Core.Field.Interface
 {
-    public interface IUnitFieldRepository
+	public interface IUnitFieldRepository
 	{
 		/// <summary>
 		/// Adds a new unit field to the data store
