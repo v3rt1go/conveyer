@@ -1,4 +1,6 @@
-﻿namespace Conveyer.Core.Field
+﻿using System.Linq;
+
+namespace Conveyer.Core.Field
 {
     using System;
     using System.Collections.Generic;
@@ -41,8 +43,10 @@
         {
         }
 
-        // TODO: Initialize with list of allowed validation types and display types for GenericField
-        public override IReadOnlyList<ValidationType> AllowedValidations { get; }
-        public override IReadOnlyList<DisplayType> AllowedDisplayTypes { get; }
+        public override IReadOnlyList<ValidationType> AllowedValidations { get; } =
+            Enum.GetValues(typeof(ValidationType)).Cast<ValidationType>().ToList();
+
+        public override IReadOnlyList<DisplayType> AllowedDisplayTypes { get; } =
+            Enum.GetValues(typeof(DisplayType)).Cast<DisplayType>().ToList();
     }
 }

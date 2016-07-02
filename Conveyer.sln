@@ -24,6 +24,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Conveyer.Core.Unit", "src\C
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Conveyer.Core.TestConsole", "src\Conveyer.Core.TestConsole\Conveyer.Core.TestConsole.xproj", "{244603CA-C1C3-4500-B2B7-539C0DE7E391}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{92399388-AC8F-4151-8EEB-D5EC46C72D04}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Conveyer.Core.Field.Tests", "test\Conveyer.Core.Field.Tests\Conveyer.Core.Field.Tests.xproj", "{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +62,10 @@ Global
 		{244603CA-C1C3-4500-B2B7-539C0DE7E391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{244603CA-C1C3-4500-B2B7-539C0DE7E391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{244603CA-C1C3-4500-B2B7-539C0DE7E391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +78,6 @@ Global
 		{0F527A73-EB17-4CCF-9991-169C75BECA8F} = {4811A61C-02E9-46ED-B488-F80B41A1B721}
 		{07938851-3239-44CE-9C4B-0CED2B195AC9} = {4811A61C-02E9-46ED-B488-F80B41A1B721}
 		{244603CA-C1C3-4500-B2B7-539C0DE7E391} = {4811A61C-02E9-46ED-B488-F80B41A1B721}
+		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB} = {92399388-AC8F-4151-8EEB-D5EC46C72D04}
 	EndGlobalSection
 EndGlobal

@@ -23,6 +23,14 @@
             BelongsTo = belongsTo;
         }
 
+        protected UnitFieldBase(Guid callerId, string displayValue, DisplayType displayType, Guid belongsTo)
+        {
+            CreatedBy = callerId;
+            DisplayType = displayType;
+            DisplayValue = displayValue;
+            BelongsTo = belongsTo;
+        }
+
         protected UnitFieldBase(Guid callerId, FieldType type, string displayValue, DisplayType displayType, Guid belongsTo)
         {
             CreatedBy = callerId;
@@ -39,7 +47,7 @@
 
         [Required]
         [DefaultValue(FieldType.ShortText)]
-        public FieldType Type { get; } = FieldType.ShortText;
+        public virtual FieldType Type { get; } = FieldType.ShortText;
 
         [Required]
         public string DisplayValue { get; set; }
