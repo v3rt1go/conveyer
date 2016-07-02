@@ -18,7 +18,6 @@ namespace Conveyer.Core.TestConsole
             var defaultCtor = new GenericField();
             var simpleCtor = new GenericField(systemAccountId, dummyUnitId);
             var fullCtor = new GenericField(systemAccountId, FieldType.Email, "Email", DisplayType.Email, dummyUnitId);
-
         }
     }
 }

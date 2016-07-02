@@ -1,4 +1,4 @@
-# Exposed APIs overview - COPIED FROM CONTENTFUL!
+# Exposed APIs overview
 
 Convey.er exposes a total of 5 APIs that can be consumed by our users to effectively build, distribute preview and manage their data and modules.
 

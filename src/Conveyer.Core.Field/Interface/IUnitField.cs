@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using Conveyer.Core.Field.State;
-using Conveyer.Core.Field.Types;
-using Conveyer.Core.Field.Ui;
-using Conveyer.Core.Field.Validations;
-using Conveyer.Core.State;
-
-namespace Conveyer.Core.Field.Interface
+﻿namespace Conveyer.Core.Field.Interface
 {
-    /// <summary>
+	using System;
+	using System.Collections.Generic;
+	using Core.State;
+	using State;
+	using Types;
+	using Ui;
+	using Validations;
+
+	/// <summary>
 	/// Defines the common contract that all UnitFields must adhere to
 	/// </summary>
 	public interface IUnitField
@@ -69,7 +69,7 @@ namespace Conveyer.Core.Field.Interface
 
 		/// <summary>
 		/// Gets or sets the version number of the field. Version number
-		/// always starts at 0 and auto increments with each State change
+		/// always starts at 1 and auto increments with each State change
 		/// </summary>
 		int Version { get; set; }
 

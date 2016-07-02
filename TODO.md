@@ -1,8 +1,3 @@
-# BACKLOG
+# TODO list on Trello
 
-# TODO
-
-* Write documentation/plan based on contentful
-* Create blog resource data model schema
-
-# DONE
+[https://trello.com/b/1GV1ALd3/conveyer]()

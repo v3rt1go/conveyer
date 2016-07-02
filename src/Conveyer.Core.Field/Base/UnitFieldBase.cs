@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using Conveyer.Core.Field.Interface;
-using Conveyer.Core.Field.State;
-using Conveyer.Core.Field.Types;
-using Conveyer.Core.Field.Ui;
-using Conveyer.Core.Field.Validations;
-using Conveyer.Core.State;
-
-namespace Conveyer.Core.Field.Base
+﻿namespace Conveyer.Core.Field.Base
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using Interface;
+    using State;
+    using Types;
+    using Ui;
+    using Validations;
+    using Core.State;
+
     public abstract class UnitFieldBase : IUnitField
     {
         protected UnitFieldBase()
@@ -19,17 +19,17 @@ namespace Conveyer.Core.Field.Base
 
         protected UnitFieldBase(Guid callerId, Guid belongsTo)
         {
-            this.CreatedBy = callerId;
-            this.BelongsTo = belongsTo;
+            CreatedBy = callerId;
+            BelongsTo = belongsTo;
         }
 
         protected UnitFieldBase(Guid callerId, FieldType type, string displayValue, DisplayType displayType, Guid belongsTo)
         {
-            this.CreatedBy = callerId;
-            this.Type = type;
-            this.DisplayType = displayType;
-            this.DisplayValue = displayValue;
-            this.BelongsTo = belongsTo;
+            CreatedBy = callerId;
+            Type = type;
+            DisplayType = displayType;
+            DisplayValue = displayValue;
+            BelongsTo = belongsTo;
         }
 
         public Guid Id { get; } = Guid.NewGuid();

@@ -2,10 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using Conveyer.Core.Field.Types;
-    using Conveyer.Core.Field.Ui;
-    using Conveyer.Core.Field.Base;
-    using Conveyer.Core.Field.Validations;
+    using Types;
+    using Ui;
+    using Base;
+    using Validations;
 
     public class GenericField : UnitFieldBase
     {

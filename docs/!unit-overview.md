@@ -1,4 +1,4 @@
-# Unit Overview - COPIED FROM CONTENTFUL
+# Unit Overview
 
 **The unit represents an entity that your module will be working with.**
 

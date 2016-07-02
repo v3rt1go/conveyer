@@ -43,7 +43,7 @@ The blog resource consists of several modules that create a basic blogging funct
 ### Security properties
 
 * Access - enum (Private, Public)
-* Belongs To - owned by #account
+* Belongs To - the id of the unit which owns the field
 
 ### Service hooks
 
