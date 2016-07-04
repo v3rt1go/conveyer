@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Conveyer.Core.Field.Interface
 {
+	// HACK: For in-memory store repository implement the IDisposable interface
 	public interface IUnitFieldRepository
 	{
 		/// <summary>

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Conveyer.Core.Field.Tests
+﻿namespace Conveyer.Core.Field.Tests
 {
+    using Xunit;
+
     public class ShortTextFieldTests
     {
     }
