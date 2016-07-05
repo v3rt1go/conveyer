@@ -15,13 +15,11 @@ namespace Conveyer.Core.TestConsole
             var systemAccountId = Guid.NewGuid();
             var dummyUnitId = Guid.NewGuid();
 
-            var defaultCtor = new GenericField();
             var simpleCtor = new GenericField(systemAccountId, dummyUnitId);
-            var fullCtor = new GenericField(systemAccountId, FieldType.Email, "Email", DisplayType.Email, dummyUnitId);
+            var fullCtor = new GenericField(FieldType.Email, "Email", DisplayType.Email, systemAccountId, dummyUnitId);
 
-            var textCtor1 = new ShortTextField();
             var textCtor2 = new ShortTextField(systemAccountId, dummyUnitId);
-            var textCtor3 = new ShortTextField(systemAccountId, "Name", DisplayType.Email, dummyUnitId);
+            var textCtor3 = new ShortTextField("Name", DisplayType.Email, systemAccountId, dummyUnitId);
         }
     }
 }

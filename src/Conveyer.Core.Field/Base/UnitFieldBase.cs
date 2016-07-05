@@ -17,27 +17,33 @@
         {
         }
 
-        protected UnitFieldBase(Guid callerId, Guid belongsTo)
+        protected UnitFieldBase(Guid callerId, Guid unitId)
         {
+            // TODO: Write a Guard utility class to check if Guid is valid
+            if (callerId == Guid.Empty)
+                throw new ArgumentException("Please provide a valid Caller Id", nameof(callerId));
+            if (unitId == Guid.Empty)
+                throw new ArgumentException("Please provide a valid Unit Id", nameof(unitId));
+
             CreatedBy = callerId;
-            BelongsTo = belongsTo;
+            UnitId = unitId;
         }
 
-        protected UnitFieldBase(Guid callerId, string displayValue, DisplayType displayType, Guid belongsTo)
+        protected UnitFieldBase(string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
+            : this(callerId, unitId)
         {
-            CreatedBy = callerId;
+            // TODO: Throw if callerId and unitId is null or guid empty
             DisplayType = displayType;
             DisplayValue = displayValue;
-            BelongsTo = belongsTo;
         }
 
-        protected UnitFieldBase(Guid callerId, FieldType type, string displayValue, DisplayType displayType, Guid belongsTo)
+        protected UnitFieldBase(FieldType type, string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
+            : this(callerId, unitId)
         {
-            CreatedBy = callerId;
+            // TODO: Throw if callerId and unitId is null or guid empty
             Type = type;
             DisplayType = displayType;
             DisplayValue = displayValue;
-            BelongsTo = belongsTo;
         }
 
         public Guid Id { get; } = Guid.NewGuid();
@@ -49,20 +55,24 @@
         [DefaultValue(FieldType.ShortText)]
         public virtual FieldType Type { get; } = FieldType.ShortText;
 
+        // TODO: Should throw if setting DisplayValue to string null/empty
         [Required]
         public string DisplayValue { get; set; }
 
         public string HelpText { get; set; }
 
+        // TODO: Should throw if setting ValidationRules is not in AllowedValidations
         public IEnumerable<ValidationType> ValidationRules { get; set; }
 
         public abstract IReadOnlyList<ValidationType> AllowedValidations { get; }
 
+        // TODO: Should throw if setting DisplayType is not in AllowedDisplayTypes
         [DefaultValue(DisplayType.SingleLine)]
         public DisplayType DisplayType { get; set; } = DisplayType.SingleLine;
 
         public abstract IReadOnlyList<DisplayType> AllowedDisplayTypes { get; }
 
+        // TODO: Should throw if setting Version <= 0
         [DefaultValue(1)]
         public int Version { get; set; } = 1;
 
@@ -70,6 +80,7 @@
 
         public Guid CreatedBy { get; }
 
+        // TODO: Should throw if setting UpdatedAt < DateTime.Now
         public DateTime? UpdatedAt { get; set; }
 
         public Guid? UpdatedBy { get; set; }
@@ -77,6 +88,6 @@
         [DefaultValue(AccessModifier.Public)]
         public AccessModifier Access { get; set; } = AccessModifier.Public;
 
-        public Guid BelongsTo { get; set; }
+        public Guid UnitId { get; set; }
     }
 }

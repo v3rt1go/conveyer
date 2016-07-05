@@ -105,7 +105,7 @@
 		/// <summary>
 		/// Gets or sets the GUID of the unit that the field belongs to
 		/// </summary>
-		Guid BelongsTo { get; set; }
+		Guid UnitId { get; set; }
 		#endregion
 	}
 }
