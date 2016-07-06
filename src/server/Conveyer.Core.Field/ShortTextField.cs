@@ -46,6 +46,7 @@ namespace Conveyer.Core.Field
         public override FieldType Type { get; } = FieldType.ShortText;
 
         // NOTE: Investigate possibility of defining allowed validation and display types at runtime.
+        // REFACTOR: Create a static class that will hold allowed validation types for each field type
         public override IReadOnlyList<ValidationType> AllowedValidations { get; }
             = new List<ValidationType>
         {
