@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Conveyer.Core.Field.Helpers;
 
 namespace Conveyer.Core.Field
 {
@@ -58,9 +59,9 @@ namespace Conveyer.Core.Field
         }
 
         public override IReadOnlyList<ValidationType> AllowedValidations { get; } =
-            Enum.GetValues(typeof(ValidationType)).Cast<ValidationType>().ToList();
+            FieldSettings.ValidationTypes["All"].ToList();
 
         public override IReadOnlyList<DisplayType> AllowedDisplayTypes { get; } =
-            Enum.GetValues(typeof(DisplayType)).Cast<DisplayType>().ToList();
+            FieldSettings.DisplayTypes["All"].ToList();
     }
 }

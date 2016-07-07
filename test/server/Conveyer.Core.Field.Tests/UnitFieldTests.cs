@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-namespace Conveyer.Core.Field.Tests
+﻿namespace Conveyer.Core.Field.Tests
 {
     using Conveyer.Core.Field.Base;
     using Conveyer.Core.Field.Interface;
@@ -12,6 +9,7 @@ namespace Conveyer.Core.Field.Tests
     using Conveyer.Core.Field.Ui;
     using Conveyer.Core.State;
     using System;
+    using System.Collections.Generic;
     using Xunit;
     using Xunit.Abstractions;
 
@@ -69,7 +67,7 @@ namespace Conveyer.Core.Field.Tests
         }
 
         [Theory, MemberData("BlankUnitId")]
-        public void ShouldThrowIfBelongsToIsEmpty(Func<object> testcode)
+        public void ShouldThrowIfUnitIdIsEmpty(Func<object> testcode)
         {
             _helper.WriteLine("Testing if ArgumentException is thrown");
             Assert.Throws(typeof(ArgumentException), testcode);
@@ -98,6 +96,13 @@ namespace Conveyer.Core.Field.Tests
             Assert.Equal(AttributeChecker.GetDefaultValue<DisplayType, UnitFieldBase>("DisplayType"), _fx.GeneralFieldSut.DisplayType);
             Assert.Equal(AttributeChecker.GetDefaultValue<int, UnitFieldBase>("Version"), _fx.GeneralFieldSut.Version);
             Assert.Equal(AttributeChecker.GetDefaultValue<AccessModifier, UnitFieldBase>("Access"), _fx.GeneralFieldSut.Access);
+        }
+
+        [Fact]
+        public void ShouldApplyValidCreatedDate()
+        {
+            _helper.WriteLine("Testing if CreatedAt is the same as current date");
+            Assert.Equal(DateTime.Now.ToString("g"), _fx.GeneralFieldSut.CreatedAt.ToString("g"));
         }
     }
 }

@@ -21,6 +21,16 @@
 		Format,
 
 		/// <summary>
+		/// Applies HTML linting and validation
+		/// </summary>
+		ValidHtml,
+
+		/// <summary>
+		/// Applies Markdown linting and validation
+		/// </summary>
+		ValidMarkdown,
+
+		/// <summary>
 		/// Applies valid e-mail format validations on the unit field
 		/// </summary>
 		Email,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Conveyer.Core.Field.Base;
+using Conveyer.Core.Field.Helpers;
 using Conveyer.Core.Field.Types;
 using Conveyer.Core.Field.Ui;
 using Conveyer.Core.Field.Validations;
@@ -46,16 +47,10 @@ namespace Conveyer.Core.Field
         public override FieldType Type { get; } = FieldType.ShortText;
 
         // NOTE: Investigate possibility of defining allowed validation and display types at runtime.
-        // REFACTOR: Create a static class that will hold allowed validation types for each field type
-        public override IReadOnlyList<ValidationType> AllowedValidations { get; }
-            = new List<ValidationType>
-        {
-            ValidationType.Required, ValidationType.Format, ValidationType.Range, ValidationType.Custom
-        };
-        public override IReadOnlyList<DisplayType> AllowedDisplayTypes { get; }
-            = new List<DisplayType>
-        {
-            DisplayType.SingleLine, DisplayType.MultiLine, DisplayType.Button
-        };
+        public override IReadOnlyList<ValidationType> AllowedValidations { get; } =
+            FieldSettings.ValidationTypes["ShortText"].ToList();
+
+        public override IReadOnlyList<DisplayType> AllowedDisplayTypes { get; } =
+            FieldSettings.DisplayTypes["ShortText"].ToList();
     }
 }

@@ -2,11 +2,8 @@
 {
     using Conveyer.Core.Field.Types;
     using Conveyer.Core.Field.Ui;
-    using Conveyer.Core.Field.Validations;
+    using Conveyer.Core.Field.Helpers;
     using Conveyer.Core.Field.Tests.Fixtures;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using Xunit;
     using Xunit.Abstractions;
 
@@ -48,15 +45,13 @@
         [Fact]
         public void ShouldAllowAnyDisplayType()
         {
-            IEnumerable<DisplayType> allDisplayTypes = Enum.GetValues(typeof(DisplayType)).Cast<DisplayType>();
-            Assert.Equal(allDisplayTypes, _fx.GeneralFieldSut.AllowedDisplayTypes);
+            Assert.Equal(FieldSettings.DisplayTypes["All"], _fx.GeneralFieldSut.AllowedDisplayTypes);
         }
 
         [Fact]
         public void ShouldAllowAnyValidationType()
         {
-            IEnumerable<ValidationType> allValidationTypes = Enum.GetValues(typeof(ValidationType)).Cast<ValidationType>();
-            Assert.Equal(allValidationTypes, _fx.GeneralFieldSut.AllowedValidations);
+            Assert.Equal(FieldSettings.ValidationTypes["All"], _fx.GeneralFieldSut.AllowedValidations);
         }
     }
 }
