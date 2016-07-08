@@ -10,7 +10,7 @@ using Conveyer.Core.Field.Validations;
 
 namespace Conveyer.Core.Field
 {
-    public class ShortTextField : UnitFieldBase
+    public class ShortTextField : FieldBase
     {
         /// <summary>
         /// Creates a new instance of ShortTextField with default values.

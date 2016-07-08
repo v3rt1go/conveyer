@@ -4,20 +4,20 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-    using Interface;
+    using Interfaces;
     using State;
     using Types;
     using Ui;
     using Validations;
     using Core.State;
 
-    public abstract class UnitFieldBase : IUnitField
+    public abstract class FieldBase : IField
     {
-        protected UnitFieldBase()
+        protected FieldBase()
         {
         }
 
-        protected UnitFieldBase(Guid callerId, Guid unitId)
+        protected FieldBase(Guid callerId, Guid unitId)
         {
             // TODO: Write a Guard utility class to check if Guid is valid
             if (callerId == Guid.Empty)
@@ -29,18 +29,16 @@
             UnitId = unitId;
         }
 
-        protected UnitFieldBase(string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
+        protected FieldBase(string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
             : this(callerId, unitId)
         {
-            // TODO: Throw if callerId and unitId is null or guid empty
             DisplayType = displayType;
             DisplayValue = displayValue;
         }
 
-        protected UnitFieldBase(FieldType type, string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
+        protected FieldBase(FieldType type, string displayValue, DisplayType displayType, Guid callerId, Guid unitId)
             : this(callerId, unitId)
         {
-            // TODO: Throw if callerId and unitId is null or guid empty
             Type = type;
             DisplayType = displayType;
             DisplayValue = displayValue;

@@ -10,7 +10,7 @@ namespace Conveyer.Core.Field
     using Base;
     using Validations;
 
-    public class GenericField : UnitFieldBase
+    public class GenericField : FieldBase
     {
         /// <summary>
         /// Creates a new instance of GenericField with default values.

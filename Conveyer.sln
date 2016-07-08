@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{E86BD7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{BA3F88F3-BDC1-4594-BD6D-8D38D2DE8AEB}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Conveyer.Services.Identity", "src\server\Conveyer.Services.Identity\Conveyer.Services.Identity.xproj", "{08556710-897F-440D-A38F-537327C57968}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4756BB8-A9A6-49AF-8439-B8095AAA99CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08556710-897F-440D-A38F-537327C57968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08556710-897F-440D-A38F-537327C57968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08556710-897F-440D-A38F-537327C57968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08556710-897F-440D-A38F-537327C57968}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,5 +97,6 @@ Global
 		{75A20B63-EADF-4362-857E-95B63A7EEE2E} = {92399388-AC8F-4151-8EEB-D5EC46C72D04}
 		{E86BD70C-AE1F-46CC-8DFB-2B09F92C7DAE} = {4811A61C-02E9-46ED-B488-F80B41A1B721}
 		{BA3F88F3-BDC1-4594-BD6D-8D38D2DE8AEB} = {4811A61C-02E9-46ED-B488-F80B41A1B721}
+		{08556710-897F-440D-A38F-537327C57968} = {E86BD70C-AE1F-46CC-8DFB-2B09F92C7DAE}
 	EndGlobalSection
 EndGlobal

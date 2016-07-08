@@ -1,7 +1,7 @@
 ﻿namespace Conveyer.Core.Field.Tests
 {
     using Conveyer.Core.Field.Base;
-    using Conveyer.Core.Field.Interface;
+    using Interfaces;
     using Conveyer.Core.Field.State;
     using Conveyer.Core.Field.Tests.Helpers;
     using Conveyer.Core.Field.Tests.Fixtures;
@@ -48,11 +48,11 @@
         [Fact]
         public void ShouldFollowInheritanceChain()
         {
-            _helper.WriteLine("Testing if implements IUnitField");
-            Assert.IsAssignableFrom(typeof(IUnitField), _fx.GeneralFieldSut);
+            _helper.WriteLine("Testing if implements IField");
+            Assert.IsAssignableFrom(typeof(IField), _fx.GeneralFieldSut);
 
-            _helper.WriteLine("Testing if inherits from UnitFieldBase");
-            Assert.IsAssignableFrom(typeof(UnitFieldBase), _fx.GeneralFieldSut);
+            _helper.WriteLine("Testing if inherits from FieldBase");
+            Assert.IsAssignableFrom(typeof(FieldBase), _fx.GeneralFieldSut);
         }
 
         [Theory, MemberData("BlankCallerId")]
@@ -91,11 +91,11 @@
         public void ShouldApplyDefaultValues()
         {
             _helper.WriteLine("Testing if default values are correctly applied");
-            Assert.Equal(AttributeChecker.GetDefaultValue<FieldState, UnitFieldBase>("State"), _fx.GeneralFieldSut.State);
-            Assert.Equal(AttributeChecker.GetDefaultValue<FieldType, UnitFieldBase>("Type"), _fx.GeneralFieldSut.Type);
-            Assert.Equal(AttributeChecker.GetDefaultValue<DisplayType, UnitFieldBase>("DisplayType"), _fx.GeneralFieldSut.DisplayType);
-            Assert.Equal(AttributeChecker.GetDefaultValue<int, UnitFieldBase>("Version"), _fx.GeneralFieldSut.Version);
-            Assert.Equal(AttributeChecker.GetDefaultValue<AccessModifier, UnitFieldBase>("Access"), _fx.GeneralFieldSut.Access);
+            Assert.Equal(AttributeChecker.GetDefaultValue<FieldState, FieldBase>("State"), _fx.GeneralFieldSut.State);
+            Assert.Equal(AttributeChecker.GetDefaultValue<FieldType, FieldBase>("Type"), _fx.GeneralFieldSut.Type);
+            Assert.Equal(AttributeChecker.GetDefaultValue<DisplayType, FieldBase>("DisplayType"), _fx.GeneralFieldSut.DisplayType);
+            Assert.Equal(AttributeChecker.GetDefaultValue<int, FieldBase>("Version"), _fx.GeneralFieldSut.Version);
+            Assert.Equal(AttributeChecker.GetDefaultValue<AccessModifier, FieldBase>("Access"), _fx.GeneralFieldSut.Access);
         }
 
         [Fact]

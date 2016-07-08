@@ -1,4 +1,4 @@
-﻿namespace Conveyer.Core.Field.Interface
+﻿namespace Conveyer.Core.Field.Interfaces
 {
 	using System;
 	using System.Collections.Generic;
@@ -11,7 +11,7 @@
 	/// <summary>
 	/// Defines the common contract that all UnitFields must adhere to
 	/// </summary>
-	public interface IUnitField
+	public interface IField
 	{
 		#region MetaProperties
 		/// <summary>

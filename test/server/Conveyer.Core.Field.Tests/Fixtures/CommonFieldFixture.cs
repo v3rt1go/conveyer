@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Conveyer.Core.Field.Interface;
+using Conveyer.Core.Field.Interfaces;
 using Xunit.Abstractions;
 
 namespace Conveyer.Core.Field.Tests.Fixtures
@@ -18,6 +18,6 @@ namespace Conveyer.Core.Field.Tests.Fixtures
 
         public Guid CallerId { get; private set; }
         public Guid UnitId { get; private set; }
-        public IUnitField GeneralFieldSut { get; private set; }
+        public IField GeneralFieldSut { get; private set; }
     }
 }

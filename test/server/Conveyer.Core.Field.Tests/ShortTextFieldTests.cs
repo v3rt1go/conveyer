@@ -2,7 +2,7 @@
 {
     using Conveyer.Core.Field.Base;
     using Conveyer.Core.Field.Helpers;
-    using Conveyer.Core.Field.Interface;
+    using Interfaces;
     using Conveyer.Core.Field.Types;
     using Conveyer.Core.Field.Ui;
     using System;
@@ -11,7 +11,7 @@
 
     public class ShortTextFieldTests
     {
-        private readonly IUnitField _sut;
+        private readonly IField _sut;
         private readonly ITestOutputHelper _helper;
 
         public ShortTextFieldTests(ITestOutputHelper helper)
@@ -25,11 +25,11 @@
         [Fact]
         public void ShouldFollowInheritanceChain()
         {
-            _helper.WriteLine("Testing if implements IUnitField");
-            Assert.IsAssignableFrom(typeof(IUnitField), _sut);
+            _helper.WriteLine("Testing if implements IField");
+            Assert.IsAssignableFrom(typeof(IField), _sut);
 
-            _helper.WriteLine("Testing if inherits from UnitFieldBase");
-            Assert.IsAssignableFrom(typeof(UnitFieldBase), _sut);
+            _helper.WriteLine("Testing if inherits from FieldBase");
+            Assert.IsAssignableFrom(typeof(FieldBase), _sut);
         }
 
 
