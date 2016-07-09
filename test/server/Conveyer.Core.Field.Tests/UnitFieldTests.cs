@@ -1,12 +1,11 @@
-﻿namespace Conveyer.Core.Field.Tests
+﻿using Conveyer.Core.Field.Helpers;
+
+namespace Conveyer.Core.Field.Tests
 {
     using Conveyer.Core.Field.Base;
     using Interfaces;
-    using Conveyer.Core.Field.State;
     using Conveyer.Core.Field.Tests.Helpers;
     using Conveyer.Core.Field.Tests.Fixtures;
-    using Conveyer.Core.Field.Types;
-    using Conveyer.Core.Field.Ui;
     using Conveyer.Core.State;
     using System;
     using System.Collections.Generic;
@@ -19,13 +18,13 @@
         private readonly CommonFieldFixture _fx;
         private readonly ITestOutputHelper _helper;
 
-        public UnitFieldTests(ITestOutputHelper helper, CommonFieldFixture fixture)
+        private UnitFieldTests(ITestOutputHelper helper, CommonFieldFixture fixture)
         {
             _fx = fixture;
             _helper = helper;
         }
 
-        public static IEnumerable<object[]> BlankCallerId
+        private static IEnumerable<object[]> BlankCallerId
         {
             get
             {
@@ -35,7 +34,7 @@
             }
         }
 
-        public static IEnumerable<object[]> BlankUnitId
+        private static IEnumerable<object[]> BlankUnitId
         {
             get
             {

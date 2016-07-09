@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Conveyer.Core.Field.Types;
-using Conveyer.Core.Field.Ui;
+using Conveyer.Core.Field.Helpers;
 
 namespace Conveyer.Core.TestConsole
 {

@@ -5,10 +5,7 @@ namespace Conveyer.Core.Field
 {
     using System;
     using System.Collections.Generic;
-    using Types;
-    using Ui;
     using Base;
-    using Validations;
 
     public class GenericField : FieldBase
     {

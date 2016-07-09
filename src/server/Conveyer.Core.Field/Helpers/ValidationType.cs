@@ -1,4 +1,4 @@
-﻿namespace Conveyer.Core.Field.Validations
+﻿namespace Conveyer.Core.Field.Helpers
 {
 	/// <summary>
 	/// Validation type options for the UnitField entity

@@ -3,8 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Conveyer.Core.Field.Ui;
-    using Conveyer.Core.Field.Validations;
 
     public static class FieldSettings
     {

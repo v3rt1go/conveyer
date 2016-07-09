@@ -1,4 +1,4 @@
-﻿namespace Conveyer.Core.Field.Ui
+﻿namespace Conveyer.Core.Field.Helpers
 {
 	/// <summary>
 	/// Display type options for the UnitField entity

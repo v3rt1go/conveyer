@@ -1,16 +1,13 @@
-﻿namespace Conveyer.Core.Field.Base
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-    using Interfaces;
-    using State;
-    using Types;
-    using Ui;
-    using Validations;
-    using Core.State;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using Conveyer.Core.Field.Helpers;
+using Conveyer.Core.Field.Interfaces;
+using Conveyer.Core.State;
 
+namespace Conveyer.Core.Field.Base
+{
     public abstract class FieldBase : IField
     {
         protected FieldBase()

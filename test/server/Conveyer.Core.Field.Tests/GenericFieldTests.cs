@@ -1,7 +1,5 @@
 ﻿namespace Conveyer.Core.Field.Tests
 {
-    using Conveyer.Core.Field.Types;
-    using Conveyer.Core.Field.Ui;
     using Conveyer.Core.Field.Helpers;
     using Conveyer.Core.Field.Tests.Fixtures;
     using Xunit;

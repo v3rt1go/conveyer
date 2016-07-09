@@ -1,14 +1,12 @@
-﻿namespace Conveyer.Core.Field.Interfaces
+﻿using Conveyer.Core.Field.Helpers;
+
+namespace Conveyer.Core.Field.Interfaces
 {
 	using System;
 	using System.Collections.Generic;
 	using Core.State;
-	using State;
-	using Types;
-	using Ui;
-	using Validations;
 
-	/// <summary>
+    /// <summary>
 	/// Defines the common contract that all UnitFields must adhere to
 	/// </summary>
 	public interface IField

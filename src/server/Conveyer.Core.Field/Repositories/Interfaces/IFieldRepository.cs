@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Conveyer.Core.Field.Interfaces;
 
-namespace Conveyer.Core.Field.Interfaces
+namespace Conveyer.Core.Field.Repositories.Interfaces
 {
 	// HACK: For in-memory store repository implement the IDisposable interface
 	public interface IFieldRepository

@@ -3,8 +3,6 @@
     using Conveyer.Core.Field.Base;
     using Conveyer.Core.Field.Helpers;
     using Interfaces;
-    using Conveyer.Core.Field.Types;
-    using Conveyer.Core.Field.Ui;
     using System;
     using Xunit;
     using Xunit.Abstractions;

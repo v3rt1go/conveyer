@@ -1,4 +1,4 @@
-﻿namespace Conveyer.Core.Field.State
+﻿namespace Conveyer.Core.Field.Helpers
 {
 	/// <summary>
 	/// State options for the UnitField entity

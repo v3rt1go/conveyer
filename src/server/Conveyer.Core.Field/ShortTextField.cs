@@ -4,9 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Conveyer.Core.Field.Base;
 using Conveyer.Core.Field.Helpers;
-using Conveyer.Core.Field.Types;
-using Conveyer.Core.Field.Ui;
-using Conveyer.Core.Field.Validations;
 
 namespace Conveyer.Core.Field
 {

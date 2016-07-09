@@ -9,10 +9,15 @@
     {
         public void RegisterUser(IUserFactory userFactory)
         {
-            IUser user = userFactory.CreateUser();
+            throw new NotImplementedException();
         }
 
         public void UpdateUser(IUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetIdentity(IUserIdentity identity)
         {
             throw new NotImplementedException();
         }
